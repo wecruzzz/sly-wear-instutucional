@@ -1,3 +1,4 @@
+/* ------------------------------------------------backgroundprimeirapagina--------------------------- */
 .videoback {
   filter: brightness(70%);
   position: relative;
@@ -16,6 +17,123 @@
   z-index: -1;
 }
 
+/* ------------------------------------------Header------------------------------------------------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 30px;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
+  position: fixed;
+}
+body.index .header {
+  top: 0;
+  left: 0;
+  height: 70px;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: transform 0.3s ease;
+  transform: translateY(-100%); /* esconde o header */
+  z-index: 1000;
+}
+
+.left,
+.center,
+.right {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  /* para deixar a imagem centralizada no meio do header */
+}
+
+.center {
+  justify-content: center;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.left i,
+.right i {
+  font-size: 16px;
+  margin: 0 5px;
+}
+
+.left input {
+  font-size: 14px;
+  padding: 5px 8px;
+  margin: 0 5px;
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: transparent;
+  height: 30px;
+}
+
+.center img {
+  height: 40px;
+  display: block;
+  object-fit: contain;
+  margin-top: 2px;
+  /* pra deixar a img 100%centralizada em relação aos icones */
+}
+/* ----------------------------------------animação-header-index------------------------------------ */
+.header-hover-area {                
+  position: fixed;
+  top: 0;
+  left: 0;                                                       /*  area invisivel para o hover do header */
+  width: 100%;  
+  height: 70px; /* mesma altura do header */
+  z-index: 999; /* abaixo do header */
+}
+.header-hover-area:hover header {
+  transform: translateY(0); /* mostra o header */
+}
+
+/* ---------------------------------------------------NAV------------------------------------- */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 15px;
+  border-bottom: solid 1px #ccc;
+  ;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------------geral-------------------------------------- */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body:not(.index) /* apliaca a regra a todas as pagina menos ao index */ {
+  padding-top: 70px;
+  /* empurra o conteúdo pra baixo, igual a altura do header */
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+
 .index {
   overflow: hidden;
 }
@@ -25,7 +143,7 @@
   font-size: 36px;
   text-align: center;
 
-  /* 👇 Adicionado para centralizar os contêineres sobre o vídeo */
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -33,17 +151,20 @@
   z-index: 1;
   display: flex;
   gap: 20px;
-  
-}
 
+}
+/* ------------------------------main-historia-------------------------------- */
+
+
+/* -----------------------------------------------conteiners-index---------------------------------- */
 .conteiner1 {
   border: 1px solid black;
   background-color: rgba(14, 14, 14, 0.1);
   padding: 20px;
   border-radius: 10px;
   color: white;
-   align-content: space-between;
-   width: 80%;
+  align-content: space-between;
+  width: 80%;
 }
 
 .conteiner2 {
@@ -52,8 +173,8 @@
   padding: 20px;
   border-radius: 10px;
   color: white;
-   align-content: space-between;
-   width: 80%;
+  align-content: space-between;
+  width: 80%;
 }
 
 .conteiner3 {
@@ -62,17 +183,19 @@
   padding: 20px;
   border-radius: 10px;
   color: white;
-   align-content: space-between;
-   width: 80%;
+  align-content: space-between;
+  width: 80%;
 }
+
 button {
   border-radius: 10px;
   width: 90px;
   background-color: black;
   color: white;
 }
-button:hover{
-background-color: white;
-color: black;
-cursor: pointer;
+
+button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
 }
