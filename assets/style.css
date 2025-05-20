@@ -122,14 +122,6 @@ nav {
 
 }
 
-
-
-
-
-
-
-
-
 /* --------------------------------------------------geral-------------------------------------- */
 
 body {
@@ -170,7 +162,16 @@ a {
 }
 
 /* ------------------------------main-historia-------------------------------- */
-
+.bannerhist{
+  width: 100%;
+  margin-right: 10px;
+  border-radius: 10px;
+  filter: brightness(80%);
+  transition: filter 0.3s ease;
+}
+.bannerhist:hover{
+filter: brightness(100%);
+}
 
 /* -----------------------------------------------conteiners-index---------------------------------- */
 .conteiner1 {
