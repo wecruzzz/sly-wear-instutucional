@@ -234,3 +234,12 @@ button:hover {
   color: black;
   cursor: pointer;
 }
+
+/*---------------------------------------missao----------------------------------*/
+
+.textomissao {
+
+  width: 50%;
+  line-height: 2;
+  
+}
