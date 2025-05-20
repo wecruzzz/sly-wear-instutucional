@@ -33,16 +33,7 @@
   width: 100%;
   position: fixed;
 }
-body.index .header {
-  top: 0;
-  left: 0;
-  height: 70px;
-  background: #ffffff;
-  color: rgb(0, 0, 0);
-  transition: transform 0.3s ease;
-  transform: translateY(-100%); /* esconde o header */
-  z-index: 1000;
-}
+
 
 .left,
 .center,
@@ -87,18 +78,37 @@ body.index .header {
   margin-top: 2px;
   /* pra deixar a img 100%centralizada em relação aos icones */
 }
+
 /* ----------------------------------------animação-header-index------------------------------------ */
-.header-hover-area {                
+body.index .header {
+  top: 0;
+  left: 0;
+  height: 70px;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: transform 0.3s ease;
+  transform: translateY(-100%);
+  /* esconde o header */
+  z-index: 1000;
+}
+
+.header-hover-area {
+  /*  area invisivel para o hover do header */
   position: fixed;
   top: 0;
-  left: 0;                                                       /*  area invisivel para o hover do header */
-  width: 100%;  
-  height: 70px; /* mesma altura do header */
-  z-index: 999; /* abaixo do header */
+  left: 0;
+  width: 100%;
+  height: 70px;
+  /* mesma altura do header */
+  z-index: 999;
+  /* abaixo do header */
 }
+
 .header-hover-area:hover header {
-  transform: translateY(0); /* mostra o header */
+  transform: translateY(0);
+  /* mostra o header */
 }
+
 
 /* ---------------------------------------------------NAV------------------------------------- */
 nav {
@@ -125,10 +135,15 @@ nav {
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
-body:not(.index) /* apliaca a regra a todas as pagina menos ao index */ {
+
+body:not(.index)
+
+/* apliaca a regra a todas as pagina menos ao index */
+  {
   padding-top: 70px;
   /* empurra o conteúdo pra baixo, igual a altura do header */
 }
+
 a {
   color: #000;
   text-decoration: none;
@@ -153,6 +168,7 @@ a {
   gap: 20px;
 
 }
+
 /* ------------------------------main-historia-------------------------------- */
 
 
