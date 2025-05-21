@@ -241,5 +241,10 @@ button:hover {
 
   width: 50%;
   line-height: 2;
-  
+
+}
+.picturemissao {
+  size: 50%;
+  width: 50%;
+  box-sizing: content-box;
 }
